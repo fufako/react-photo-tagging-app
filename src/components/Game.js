@@ -1,18 +1,19 @@
 import { useState, useEffect } from "react"
 import { db } from "../firebase-config"
 import { collection, getDocs } from "firebase/firestore"
-import Map from "../map1.jpg"
 function Game() {
   const [maps, setMaps] = useState([])
   const mapsCollectionRef = collection(db, "maps")
-
+  console.log(maps)
   const getCoords = (e) => {
-    let currentTargetRect = e.currentTarget.getBoundingClientRect()
-    const event_offsetX = e.pageX - currentTargetRect.left
-    const event_offsetY = e.pageY - currentTargetRect.top
+    e.preventDefault()
+    let bounds = e.currentTarget.getBoundingClientRect()
+    const event_offsetX = e.clientX - bounds.left
+    const event_offsetY = e.clientY - bounds.top
 
-    console.log(event_offsetX)
-    console.log(event_offsetY)
+    const userCoords = { x: event_offsetX, y: event_offsetY }
+
+    return userCoords
   }
   useEffect(() => {
     const getMap = async () => {
@@ -27,27 +28,27 @@ function Game() {
     getMap()
   }, [])
 
-  const checkCoords = (xUser, yUser) => {
-    const xCoords = maps[0].xCoord
-    const yCoords = maps[0].yCoord
-    console.log(xCoords)
-    console.log(yCoords)
+  const checkCoords = (e) => {
+    const userCoords = getCoords(e)
+
+    const { xCoord, yCoord } = maps?.[0]
+    console.log("User coords: " + userCoords.x + " " + userCoords.y)
+    console.log("Correct coords" + xCoord + " " + yCoord)
   }
 
   return (
     <div className="game">
-      <img
-        src={Map}
-        alt=""
-        onClick={(e) => {
-          getCoords(e)
-        }}
-      />
-      <button
-        onClick={() => {
-          checkCoords(100, 100)
-        }}
-      ></button>
+      <div className="img-container">
+        {maps.length ? (
+          <img
+            src={maps[0].url}
+            alt="map1"
+            onClick={(e) => {
+              checkCoords(e)
+            }}
+          />
+        ) : null}
+      </div>
     </div>
   )
 }
