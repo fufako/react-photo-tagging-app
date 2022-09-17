@@ -1,10 +1,5 @@
-import { useState, useEffect } from "react"
-import { db } from "../firebase-config"
-import { collection, getDocs } from "firebase/firestore"
-function Game() {
-  const [maps, setMaps] = useState([])
-  const mapsCollectionRef = collection(db, "maps")
-  console.log(maps)
+function Game(props) {
+  const { maps } = props
   const getCoords = (e) => {
     e.preventDefault()
     let bounds = e.currentTarget.getBoundingClientRect()
@@ -15,18 +10,6 @@ function Game() {
 
     return userCoords
   }
-  useEffect(() => {
-    const getMap = async () => {
-      const data = await getDocs(mapsCollectionRef)
-      setMaps(
-        data.docs.map((doc) => ({
-          ...doc.data(),
-        }))
-      )
-    }
-
-    getMap()
-  }, [])
 
   const checkCoords = (e) => {
     const userCoords = getCoords(e)
