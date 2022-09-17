@@ -1,5 +1,11 @@
+import { useLocation } from "react-router-dom"
+import Header from "./Header"
+
 function Game(props) {
   const { maps } = props
+  const { state } = useLocation()
+  const level = state.level
+  console.log(level)
   const getCoords = (e) => {
     e.preventDefault()
     let bounds = e.currentTarget.getBoundingClientRect()
@@ -14,25 +20,28 @@ function Game(props) {
   const checkCoords = (e) => {
     const userCoords = getCoords(e)
 
-    const { xCoord, yCoord } = maps?.[0]
+    const { xCoord, yCoord } = maps?.[level]
     console.log("User coords: " + userCoords.x + " " + userCoords.y)
     console.log("Correct coords" + xCoord + " " + yCoord)
   }
 
   return (
-    <div className="game">
-      <div className="img-container">
-        {maps.length ? (
-          <img
-            src={maps[0].url}
-            alt="map1"
-            onClick={(e) => {
-              checkCoords(e)
-            }}
-          />
-        ) : null}
+    <>
+      <div className="game">
+        <div className="img-container">
+          {maps.length ? (
+            <img
+              className="game-img"
+              src={maps[level].url}
+              alt="map1"
+              onClick={(e) => {
+                checkCoords(e)
+              }}
+            />
+          ) : null}
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 

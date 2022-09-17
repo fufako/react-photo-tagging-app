@@ -4,7 +4,7 @@ import { collection, getDocs } from "firebase/firestore"
 import Home from "./components/Home"
 import Header from "./components/Header"
 import Game from "./components/Game"
-import { Routes, Route, Link } from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
 
 function App() {
   const [maps, setMaps] = useState([])
@@ -30,7 +30,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home maps={maps} />} />
-          <Route path="/game" element={<Game />} />
+          <Route path="/game" element={<Game maps={maps} />} />
         </Routes>
       </div>
     </>
