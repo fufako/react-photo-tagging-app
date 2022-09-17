@@ -20,4 +20,15 @@ body {
 }
 .level {
   text-align: center;
+  background-color: antiquewhite;
+  padding: 20px;
+}
+.patrick {
+  width: 200px;
+  height: 200px;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

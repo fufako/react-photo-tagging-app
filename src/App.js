@@ -2,6 +2,9 @@ import { useState, useEffect } from "react"
 import { db } from "./firebase-config"
 import { collection, getDocs } from "firebase/firestore"
 import Home from "./components/Home"
+import Header from "./components/Header"
+import Game from "./components/Game"
+import { Routes, Route, Link } from "react-router-dom"
 
 function App() {
   const [maps, setMaps] = useState([])
@@ -20,7 +23,18 @@ function App() {
     getMap()
   }, [])
 
-  return <Home maps={maps} />
+  return (
+    <>
+      <div className="main">
+        <Header />
+
+        <Routes>
+          <Route path="/" element={<Home maps={maps} />} />
+          <Route path="/game" element={<Game />} />
+        </Routes>
+      </div>
+    </>
+  )
 }
 
 export default App
