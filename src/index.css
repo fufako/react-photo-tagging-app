@@ -11,11 +11,12 @@ body {
   height: fit-content;
 }
 .level-select {
-  width: 200px;
-  height: 100px;
+  width: 300px;
+  height: 150px;
 }
 .levels-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 40px;
 }
 .level {

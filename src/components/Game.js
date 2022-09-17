@@ -5,7 +5,8 @@ function Game(props) {
   const { maps } = props
   const { state } = useLocation()
   const level = state.level
-  console.log(level)
+  console.log(maps[3])
+
   const getCoords = (e) => {
     e.preventDefault()
     let bounds = e.currentTarget.getBoundingClientRect()
@@ -21,6 +22,7 @@ function Game(props) {
     const userCoords = getCoords(e)
 
     const { xCoord, yCoord } = maps?.[level]
+
     console.log("User coords: " + userCoords.x + " " + userCoords.y)
     console.log("Correct coords" + xCoord + " " + yCoord)
   }
