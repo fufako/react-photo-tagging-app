@@ -10,3 +10,14 @@ body {
   width: fit-content;
   height: fit-content;
 }
+.level-select {
+  width: 200px;
+  height: 100px;
+}
+.levels-container {
+  display: flex;
+  gap: 40px;
+}
+.level {
+  text-align: center;
+}

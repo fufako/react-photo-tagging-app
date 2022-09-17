@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { db } from "./firebase-config"
 import { collection, getDocs } from "firebase/firestore"
-import Game from "./components/Game"
+import Home from "./components/Home"
 
 function App() {
   const [maps, setMaps] = useState([])
@@ -20,7 +20,7 @@ function App() {
     getMap()
   }, [])
 
-  return <Game maps={maps} />
+  return <Home maps={maps} />
 }
 
 export default App
