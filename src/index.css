@@ -37,3 +37,6 @@ body {
   width: 1320px;
   height: 900px;
 }
+.header-title {
+  text-decoration: none;
+}

@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom"
 import Header from "./Header"
+import CountUp from "react-countup"
 
 function Game(props) {
   const { maps } = props
@@ -30,6 +31,7 @@ function Game(props) {
   return (
     <>
       <div className="game">
+        <CountUp end={1000} duration={1000} />
         <div className="img-container">
           {maps.length ? (
             <img
