@@ -11,7 +11,7 @@ const Home = (props) => {
   return (
     <>
       <div className="levels-container">
-        <Link to="react-photo-tagging-app/game" state={{ level: 0 }}>
+        <Link to="./game" state={{ level: 0 }}>
           <div
             className="level"
             onClick={() => {
@@ -24,7 +24,7 @@ const Home = (props) => {
             ) : null}
           </div>
         </Link>
-        <Link to="react-photo-tagging-app/game" state={{ level: 1 }}>
+        <Link to="./game" state={{ level: 1 }}>
           <div className="level">
             <p>Level 2</p>
             {maps.length ? (
@@ -32,11 +32,7 @@ const Home = (props) => {
             ) : null}
           </div>
         </Link>
-        <Link
-          to="react-photo-tagging-app/game"
-          state={{ level: 2 }}
-          className="level-name"
-        >
+        <Link to="./game" state={{ level: 2 }} className="level-name">
           <div className="level">
             <p>Level 3</p>
             {maps.length ? (
@@ -44,7 +40,7 @@ const Home = (props) => {
             ) : null}
           </div>
         </Link>
-        <Link to="react-photo-tagging-app/game" state={{ level: 3 }}>
+        <Link to="./game" state={{ level: 3 }}>
           <div className="level">
             <p className="level-name">Level 4</p>
             {maps.length ? (
@@ -52,7 +48,7 @@ const Home = (props) => {
             ) : null}
           </div>
         </Link>
-        <Link to="react-photo-tagging-app/game" state={{ level: 4 }}>
+        <Link to="./game" state={{ level: 4 }}>
           <div className="level">
             <p className="level-name">Level 5</p>
             {maps.length ? (
@@ -60,7 +56,7 @@ const Home = (props) => {
             ) : null}
           </div>
         </Link>
-        <Link to="react-photo-tagging-app/game" state={{ level: 5 }}>
+        <Link to="./game" state={{ level: 5 }}>
           <div className="level">
             <p className="level-name">Level 6</p>
             {maps.length ? (
@@ -68,7 +64,7 @@ const Home = (props) => {
             ) : null}
           </div>
         </Link>
-        <Link to="react-photo-tagging-app/game" state={{ level: 6 }}>
+        <Link to="./game" state={{ level: 6 }}>
           <div className="level">
             <p className="level-name">Level 7</p>
             {maps.length ? (
@@ -76,7 +72,7 @@ const Home = (props) => {
             ) : null}
           </div>
         </Link>
-        <Link to="react-photo-tagging-app/game" state={{ level: 7 }}>
+        <Link to="./game" state={{ level: 7 }}>
           <div className="level">
             <p className="level-name">Level 8</p>
             {maps.length ? (

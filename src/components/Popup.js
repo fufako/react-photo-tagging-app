@@ -15,7 +15,7 @@ const Popup = (props) => {
         <p>
           Checkout different levels <span className="popup-purple">below</span>
         </p>
-        <Link to="/" className="back-to-levels">
+        <Link to="/react-photo-tagging-app" className="back-to-levels">
           <button>Levels</button>
         </Link>
       </div>
