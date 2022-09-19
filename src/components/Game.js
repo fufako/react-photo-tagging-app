@@ -30,7 +30,7 @@ function Game(props) {
   }
   const checkCoords = (e) => {
     const userCoords = getCoords(e)
-    const count = document.querySelector(".game").textContent
+    const count = document.querySelector(".timer").textContent
 
     const { xCoord, yCoord } = maps?.[level]
     if (inRange(userCoords.x, userCoords.y, xCoord, yCoord)) {
@@ -51,7 +51,10 @@ function Game(props) {
     <>
       <div className="game">
         {gameOver ? <Popup time={time} /> : null}
-        <Timer isGameOver={gameOver}></Timer>
+        <div className="timer">
+          <Timer isGameOver={gameOver}></Timer>
+        </div>
+
         <div className="img-container">
           {maps.length ? (
             <img

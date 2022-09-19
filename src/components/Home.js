@@ -18,7 +18,7 @@ const Home = (props) => {
               pickLvl()
             }}
           >
-            <p>Easy</p>
+            <p>Level 1</p>
             {maps.length ? (
               <img src={maps[0].url} alt="" className="level-select" />
             ) : null}
@@ -26,7 +26,7 @@ const Home = (props) => {
         </Link>
         <Link to="/game" state={{ level: 1 }}>
           <div className="level">
-            <p>Medium</p>
+            <p>Level 2</p>
             {maps.length ? (
               <img src={maps[1].url} alt="" className="level-select" />
             ) : null}
@@ -34,7 +34,7 @@ const Home = (props) => {
         </Link>
         <Link to="/game" state={{ level: 2 }}>
           <div className="level">
-            <p>Medium</p>
+            <p>Level 3</p>
             {maps.length ? (
               <img src={maps[2].url} alt="" className="level-select" />
             ) : null}
@@ -42,7 +42,7 @@ const Home = (props) => {
         </Link>
         <Link to="/game" state={{ level: 3 }}>
           <div className="level">
-            <p>Hard</p>
+            <p>Level 4</p>
             {maps.length ? (
               <img src={maps[3].url} alt="" className="level-select" />
             ) : null}
