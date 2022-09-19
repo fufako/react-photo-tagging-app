@@ -5,9 +5,16 @@ const Popup = (props) => {
   return (
     <div className="popup">
       <div className="popup-info">
-        <p>Congrats you found Patrick!</p>
-        <p>Your time is: {time}</p>
-        <p>Checkout different levels below</p>
+        <p className="popup-top">
+          Congrats you found <span className="popup-purple">Patrick!</span>
+        </p>
+        <p>
+          Your time was: <span className="popup-purple">{time}</span>{" "}
+        </p>
+        <br />
+        <p>
+          Checkout different levels <span className="popup-purple">below</span>
+        </p>
         <Link to="/" className="back-to-levels">
           <button>Levels</button>
         </Link>
