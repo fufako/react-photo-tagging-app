@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom"
-import Patrick from "./images/patrick.png"
 
 const Header = () => {
   return (
@@ -12,7 +11,7 @@ const Header = () => {
 
       <div className="about-container">
         <Link to="/about" className="header-about">
-          Info
+          About
         </Link>
       </div>
     </div>
