@@ -100,7 +100,7 @@ h1:hover {
 }
 .levels-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 450px));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 400px));
   gap: 40px;
   margin-top: 50px;
   width: 100%;
@@ -108,7 +108,7 @@ h1:hover {
 }
 .level {
   text-align: center;
-  padding: 40px;
+  padding: 50px;
   z-index: 100;
   filter: grayscale();
   transform: scale(1);
@@ -179,7 +179,7 @@ h1:hover {
 .level p {
   color: #6f4ca2;
   font-size: 1.2rem;
-  margin: 10px 0;
+  margin: 0;
 }
 .levels-container a {
   text-decoration: none;

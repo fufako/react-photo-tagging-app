@@ -15,6 +15,12 @@ const About = () => {
           fufako
         </a>{" "}
       </h3>
+      <h3 className="author">
+        maps by{" "}
+        <a href="https://www.reddit.com/r/wherespatrick/" className="fufako">
+          Where's Patrick?
+        </a>{" "}
+      </h3>
     </div>
   )
 }

@@ -48,6 +48,38 @@ const Home = (props) => {
             ) : null}
           </div>
         </Link>
+        <Link to="/game" state={{ level: 4 }}>
+          <div className="level">
+            <p className="level-name">Level 5</p>
+            {maps.length ? (
+              <img src={maps[4].url} alt="" className="level-select" />
+            ) : null}
+          </div>
+        </Link>
+        <Link to="/game" state={{ level: 5 }}>
+          <div className="level">
+            <p className="level-name">Level 6</p>
+            {maps.length ? (
+              <img src={maps[5].url} alt="" className="level-select" />
+            ) : null}
+          </div>
+        </Link>
+        <Link to="/game" state={{ level: 6 }}>
+          <div className="level">
+            <p className="level-name">Level 7</p>
+            {maps.length ? (
+              <img src={maps[6].url} alt="" className="level-select" />
+            ) : null}
+          </div>
+        </Link>
+        <Link to="/game" state={{ level: 7 }}>
+          <div className="level">
+            <p className="level-name">Level 8</p>
+            {maps.length ? (
+              <img src={maps[7].url} alt="" className="level-select" />
+            ) : null}
+          </div>
+        </Link>
       </div>
     </>
   )
