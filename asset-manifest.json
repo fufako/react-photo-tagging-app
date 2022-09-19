@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-photo-tagging-app/static/css/main.e7b91ef7.css",
+    "main.js": "/react-photo-tagging-app/static/js/main.2cef8bd8.js",
+    "static/media/patrick.png": "/react-photo-tagging-app/static/media/patrick.deacf40a267bb319843b.png",
+    "static/media/cursor-pointer.png": "/react-photo-tagging-app/static/media/cursor-pointer.91c76600c3cdc726d3d7.png",
+    "index.html": "/react-photo-tagging-app/index.html",
+    "main.e7b91ef7.css.map": "/react-photo-tagging-app/static/css/main.e7b91ef7.css.map",
+    "main.2cef8bd8.js.map": "/react-photo-tagging-app/static/js/main.2cef8bd8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e7b91ef7.css",
+    "static/js/main.2cef8bd8.js"
+  ]
+}
