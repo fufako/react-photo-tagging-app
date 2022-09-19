@@ -1,12 +1,13 @@
 import { useLocation } from "react-router-dom"
+import { useEffect, useState } from "react"
 import Header from "./Header"
 import CountUp from "react-countup"
 
 function Game(props) {
   const { maps } = props
   const { state } = useLocation()
+  const [gameOver, setGameOver] = useState(false)
   const level = state.level
-  console.log(maps[3])
 
   const getCoords = (e) => {
     e.preventDefault()
@@ -18,16 +19,28 @@ function Game(props) {
 
     return userCoords
   }
-
+  const inRange = (userX, userY, xCoord, yCoord) => {
+    return (
+      userX >= xCoord - 10 &&
+      userX <= xCoord + 10 &&
+      userY >= yCoord - 20 &&
+      userY <= yCoord + 20
+    )
+  }
   const checkCoords = (e) => {
     const userCoords = getCoords(e)
 
     const { xCoord, yCoord } = maps?.[level]
+    if (inRange(userCoords.x, userCoords.y, xCoord, yCoord)) {
+      setGameOver(true)
+    }
 
     console.log("User coords: " + userCoords.x + " " + userCoords.y)
     console.log("Correct coords" + xCoord + " " + yCoord)
   }
-
+  useEffect(() => {
+    if (gameOver === true) console.log("Gameover")
+  }, [gameOver])
   return (
     <>
       <div className="game">
