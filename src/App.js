@@ -29,9 +29,12 @@ function App() {
       <Header />
 
       <Routes>
-        <Route path="/" element={<Home maps={maps} />} />
-        <Route path="/game" element={<Game maps={maps} />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/react-photo-tagging-app" element={<Home maps={maps} />} />
+        <Route
+          path="react-photo-tagging-app/game"
+          element={<Game maps={maps} />}
+        />
+        <Route path="react-photo-tagging-app/about" element={<About />} />
       </Routes>
     </>
   )
