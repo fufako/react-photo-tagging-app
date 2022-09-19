@@ -32,7 +32,7 @@ const Home = (props) => {
             ) : null}
           </div>
         </Link>
-        <Link to="/game" state={{ level: 2 }}>
+        <Link to="/game" state={{ level: 2 }} className="level-name">
           <div className="level">
             <p>Level 3</p>
             {maps.length ? (
@@ -42,7 +42,7 @@ const Home = (props) => {
         </Link>
         <Link to="/game" state={{ level: 3 }}>
           <div className="level">
-            <p>Level 4</p>
+            <p className="level-name">Level 4</p>
             {maps.length ? (
               <img src={maps[3].url} alt="" className="level-select" />
             ) : null}

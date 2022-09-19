@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Slackey&display=swap");
 body {
   margin: 0;
-  background-color: #fb9392;
 }
 #root {
   display: flex;
@@ -58,13 +57,18 @@ h1 {
 }
 .levels-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(350px, 450px));
   gap: 40px;
+  margin-top: 50px;
+  width: 100%;
+  justify-content: center;
 }
 .level {
   text-align: center;
-  background-color: antiquewhite;
   padding: 20px;
+  border-radius: 20px;
+  z-index: 100;
+  box-shadow: 0px 8px 13px -5px rgba(43, 43, 43, 1);
 }
 .patrick {
   width: 200px;
@@ -75,6 +79,9 @@ h1 {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  background-color: #fb9392;
+  z-index: 100;
+  box-shadow: 0px 8px 13px -5px rgba(43, 43, 43, 1);
 }
 .game-img {
   width: 1320px;
@@ -91,4 +98,34 @@ h1 {
 .timer {
   text-align: center;
   font-size: 2.5rem;
+  color: #6f4ca2;
+  padding: 20px;
+}
+.level p {
+  color: #6f4ca2;
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+.levels-container a {
+  text-decoration: none;
+}
+
+@media (max-width: 430px) {
+  .levels-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
+  }
+  .level-select {
+    width: 200px;
+    height: 100px;
+  }
+  .header {
+    width: auto;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .level p {
+    font-size: 1rem;
+  }
 }
