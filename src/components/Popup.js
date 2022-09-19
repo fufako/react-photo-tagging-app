@@ -6,11 +6,8 @@ const Popup = (props) => {
     <div className="popup">
       <div className="popup-info">
         <p>Congrats you found Patrick!</p>
-        <p>{time}</p>
-        <p>
-          Checkout different levels or how did you do compared to diffrent
-          players!
-        </p>
+        <p>Your time is: {time}</p>
+        <p>Checkout different levels below</p>
         <Link to="/" className="back-to-levels">
           <button>Levels</button>
         </Link>

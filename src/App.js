@@ -4,6 +4,7 @@ import { collection, getDocs } from "firebase/firestore"
 import Home from "./components/Home"
 import Header from "./components/Header"
 import Game from "./components/Game"
+import About from "./components/About"
 import { Routes, Route } from "react-router-dom"
 
 function App() {
@@ -25,14 +26,13 @@ function App() {
 
   return (
     <>
-      <div className="main">
-        <Header />
+      <Header />
 
-        <Routes>
-          <Route path="/" element={<Home maps={maps} />} />
-          <Route path="/game" element={<Game maps={maps} />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<Home maps={maps} />} />
+        <Route path="/game" element={<Game maps={maps} />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
     </>
   )
 }

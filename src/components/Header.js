@@ -4,11 +4,17 @@ import Patrick from "./images/patrick.png"
 const Header = () => {
   return (
     <div className="header">
-      <img src={Patrick} alt="Patrick" className="patrick" />
+      <div className="header-title">
+        <Link to="/" className="header-title">
+          <h1>Where's Patrick?</h1>
+        </Link>
+      </div>
 
-      <Link to="/" className="header-title">
-        <h1>Where's Patrick?</h1>
-      </Link>
+      <div className="about-container">
+        <Link to="/about" className="header-about">
+          Info
+        </Link>
+      </div>
     </div>
   )
 }

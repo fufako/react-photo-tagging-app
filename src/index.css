@@ -1,14 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Slackey&display=swap");
 body {
   margin: 0;
+  background-color: #fb9392;
 }
 #root {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: "Slackey", cursive;
+  flex-direction: column;
 }
 .game {
   width: fit-content;
   height: fit-content;
+}
+h1 {
+  color: #6f4ca2;
+}
+.about-container {
+  display: flex;
+  flex: 1;
+  text-align: right;
+  margin-left: auto;
+  width: 100%;
+}
+.about-container a {
+  flex: 1;
+  padding: 0 50px;
+  text-decoration: none;
+  color: #6f4ca2;
+}
+.about {
+  width: 100vh;
 }
 .popup {
   position: fixed;
@@ -49,13 +72,23 @@ body {
 }
 .header {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 .game-img {
   width: 1320px;
   height: 900px;
+  box-shadow: 0px 8px 13px -5px rgba(43, 43, 43, 1);
+  z-index: 10;
+  position: relative;
+  margin-bottom: 50px;
 }
 .header-title {
   text-decoration: none;
+  padding: 0 50px;
+}
+.timer {
+  text-align: center;
+  font-size: 2.5rem;
 }
