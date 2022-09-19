@@ -7,6 +7,7 @@ function Game(props) {
   const { maps } = props
   const { state } = useLocation()
   const [gameOver, setGameOver] = useState(false)
+  const [time, setTime] = useState()
   const level = state.level
 
   const getCoords = (e) => {
@@ -29,9 +30,12 @@ function Game(props) {
   }
   const checkCoords = (e) => {
     const userCoords = getCoords(e)
+    const count = document.querySelector(".game").textContent
 
     const { xCoord, yCoord } = maps?.[level]
     if (inRange(userCoords.x, userCoords.y, xCoord, yCoord)) {
+      console.log(count)
+      setTime(count)
       setGameOver(true)
     }
 
@@ -46,8 +50,8 @@ function Game(props) {
   return (
     <>
       <div className="game">
-        {gameOver ? <Popup /> : null}
-        <Timer></Timer>
+        {gameOver ? <Popup time={time} /> : null}
+        <Timer isGameOver={gameOver}></Timer>
         <div className="img-container">
           {maps.length ? (
             <img
