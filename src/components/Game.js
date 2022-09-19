@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom"
 import { useEffect, useState } from "react"
-import Header from "./Header"
-import CountUp from "react-countup"
+import Popup from "./Popup"
+import Timer from "./Timer"
 
 function Game(props) {
   const { maps } = props
@@ -39,12 +39,15 @@ function Game(props) {
     console.log("Correct coords" + xCoord + " " + yCoord)
   }
   useEffect(() => {
-    if (gameOver === true) console.log("Gameover")
+    if (gameOver) {
+      console.log("Gameover")
+    }
   }, [gameOver])
   return (
     <>
       <div className="game">
-        <CountUp end={1000} duration={1000} />
+        {gameOver ? <Popup /> : null}
+        <Timer></Timer>
         <div className="img-container">
           {maps.length ? (
             <img

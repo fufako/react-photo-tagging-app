@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import Patrick from "./images/patrick.png"
+
 const Header = () => {
   return (
     <div className="header">

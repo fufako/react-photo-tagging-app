@@ -10,6 +10,25 @@ body {
   width: fit-content;
   height: fit-content;
 }
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  color: #e4dccf;
+  background-color: rgba(43, 43, 43, 0.3);
+  z-index: 100;
+}
+.popup-info {
+  background-color: aliceblue;
+}
 .level-select {
   width: 300px;
   height: 150px;
