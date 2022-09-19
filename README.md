@@ -1,8 +1,8 @@
 # Where's Patrick
 
-Where's Patrick (Photo Tagging) type App made with React and Firebase.
-The pourpse of this game is to find Patrick each map contains one Patrick.
-Maps and correct location are fetched form Firebase Database so that users can not cheat. 
+Where's Patrick (Photo Tagging) type App made with React and Firebase. <br/>
+The pourpse of this game is to find Patrick each map contains one Patrick.<br/>
+Maps and correct location are fetched form Firebase Database so that users can not cheat. <br/>
 
 ## Live app
 
